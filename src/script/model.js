@@ -107,7 +107,7 @@ const makeObject = function (obj, validation) {
 
 const validateData = function (obj) {
   // if (obj === undefined) return;
-  if (obj.amount < 1) throw new Error(`No it's not an expense or income`);
+  if (obj.amount < 1) throw new Error(`Fill all the fields`);
   const objArr = Object.values(obj);
 
   return objArr.some((value) => value === "");

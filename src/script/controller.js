@@ -10,6 +10,7 @@ import {
 import GetDataView from "./views/GetDataView.js";
 import RenderView from "./views/RenderView.js";
 import DeleteBudgetView from "./views/DeleteBudgetView.js";
+import ErrorView from "./views/ErrorView.js";
 const calcOverAll = function () {
   // calc function will return total value according to parameter
   calc("budget");
@@ -41,23 +42,27 @@ const updateUi = function () {
 };
 
 const App = function (e) {
-  // getting data from user
-  const data = GetDataView._getData(e);
+  try {
+    // getting data from user
+    const data = GetDataView._getData(e);
 
-  // if pressed key is not enter then return from function
-  if (!data) return;
-  console.log(data);
-  //   validating data
-  const isValid = validateData(data);
-  console.log(isValid);
-  // if validation not sucess then return from function
-  if (isValid === true) return;
+    // if pressed key is not enter then return from function
+    if (!data) return;
 
-  // creating an object
-  makeObject(data, isValid);
+    //   validating data
+    const isValid = validateData(data);
 
-  // update ui
-  updateUi();
+    // if validation not sucess then return from function
+    if (isValid === true) return;
+
+    // creating an object
+    makeObject(data, isValid);
+
+    // update ui
+    updateUi();
+  } catch (err) {
+    ErrorView._renderError(err.message);
+  }
 };
 
 const deleteController = function (itemId) {
@@ -79,5 +84,10 @@ const deleteController = function (itemId) {
   updateUi();
 })();
 
+const errHideController = function () {
+  ErrorView._hideError();
+};
+
 GetDataView.handler(App);
 DeleteBudgetView._deleteHandler(deleteController);
+ErrorView._handler(errHideController);

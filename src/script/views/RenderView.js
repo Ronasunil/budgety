@@ -5,6 +5,7 @@ class RenderView {
   _data;
   _incomeConatiner = document.querySelector(".income-list");
   _expenseContainer = document.querySelector(".expense-list");
+
   _setData(data) {
     this._clear(this._incomeConatiner);
     this._clear(this._expenseContainer);
