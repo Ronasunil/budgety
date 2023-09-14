@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;700;800&family=Open+Sans:wght@300&family=Roboto+Condensed:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header class="main-header header-img">
+
+            <div class="main-header-content">
+                <div class="main-heater-title">
+                    <p class="month-budget-text">Availabe Budget in Month</p>
+                    <p class="month-budget-value ">+0.00</p>
+
+                </div>
+                <div class="income-box">
+                    <p class="income-box-name">income</p>
+                    <div class="row">
+                        <p class="income-box-value">+0.00</p>
+                        <div class="income-box-percentage hidden"></div>
+                    </div>
+                </div>
+                <div class="expense-box">
+                    <p class="expense-box-name">expense</p>
+                    <div class="row">
+                        <p class="expense-box-value">-0.00</p>
+                        <div class="expense-box-percentage">45%</div>
+                    </div>
+                </div>
+            </div>    
+        </header>
+        <section class="main-input section-1">
+            <select class="select-add" name="" id="">
+                <option class="select-inc" value="income">+</option>
+                <option class="select-exp" value="expense">-</option>
+            </select>
+            <input class="input-description" type="text" placeholder="Add Description">
+            <input class="input-number" type="number" placeholder="0">
+        </section>
+
+        <section class="section-2">
+
+            <p class="income-heading">income</p>
+            <p class="expense-heading">expenses</p>
+
+            <div class="income-list">
+                <!-- <div class="income-item">
+                    <span class="income-item-name">project</span>
+                    <div class="row">
+                        <span class="income-item-value">+45345</span>
+                        <button class="close-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-income">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                      
+                </div> -->
+
+                
+             </div>
+
+             <div class="expense-list">
+                <!-- <div class="expense-item">
+                    <span class="income-item-name">project</span>
+                    <div class="row">
+                        <span class="expense-item-value">+45345</span>
+                        <button class="close-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-expense">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </button>
+                       
+                    </div>
+                      
+                </div> -->
+             </div>
+        </section>
+    </div>
+</body>
+
+<script type="module" src="./src/script/controller.js"></script>
+</html>

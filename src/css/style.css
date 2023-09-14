@@ -1,0 +1,242 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.header-img{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../img/expense.avif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+}
+
+.main-header-content{
+    text-align: center;
+}
+
+.main-header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+.main-heater-title{
+    padding-bottom: 10px;
+}
+
+.month-budget-text{
+    font-size: 38px;
+}
+
+.month-budget-value{
+    font-size: 45px;
+   
+}
+
+
+
+/* .effect{
+    transition: 3s;
+} */
+
+.input-number{
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #000;
+}
+
+.input-number::-webkit-inner-spin-button{
+    opacity: 1;
+
+}
+
+.input-description{
+    height: 40px;
+    width: 240px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #000;
+}
+
+.select-add{
+    height: 40px;
+    width:60px ;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #000;
+}
+
+.main-input{
+    background-color: #f1f1f1;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.income-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #28B9B5;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+
+.expense-box{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #FF5049;
+    height: 80px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.expense-box-name, .income-box-name{
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.expense-box-value, .income-box-value{
+    font-size: 20px;
+}
+
+.expense-box-percentage,.income-box-percentage{
+    height: 20px;
+    width: 30px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.row{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+
+    
+.income-heading{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #28B9B5;
+    margin-bottom: 10px;
+}
+
+
+
+.expense-heading{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #FF5049;
+    margin-bottom: 10px;
+    
+}
+
+.icon-income{
+    height: 24px;
+    width: 24px;
+    stroke: #28B9B5;
+    border-radius: 10px;
+}
+
+.icon-expense{
+    height: 24px;
+    width: 24px;
+    stroke: #FF5049;
+    border-radius: 10px;
+}
+
+
+.icon-income:hover{
+    box-shadow: 0 1px 2px rgba(156, 150, 150, 0.66);
+    transform: translateY(-3px);
+    transition: 0.5s;
+}
+
+.icon-expense:hover{
+    box-shadow: 0 1px 2px rgba(156, 150, 150, 0.66);
+    transform: translateY(-3px);
+    transition: 0.5s;
+}
+
+.income-item, .expense-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #e8e3e3;
+    border-bottom: 1px solid #e8e3e3;
+    height: 35px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.income-item:hover{ 
+    border-top: 1px solid #28B9B5;
+    border-bottom: 1px solid #28B9B5;
+    transition: 0.5s;
+}
+
+.expense-item:hover{
+    border-top: 1px solid #FF5049;
+    border-bottom: 1px solid #FF5049;
+    transition: 0.5s;
+}
+
+
+.income-item-name,.expense-item-name{
+    font-size: 20px;
+}
+
+.income-item-value {
+    color: #28B9B5;
+    font-size: 20px;
+}
+
+.income-list{
+    width: 50%;
+}
+
+.expense-list{
+    width: 50%;
+}
+
+.expense-item-value{
+    color: #FF5049;
+    font-size: 20px;
+}
+
+.close-btn{
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+   
+}
+
+.hidden{
+    opacity: 0;
+}
